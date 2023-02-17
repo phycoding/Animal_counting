@@ -6,7 +6,8 @@ Installation
 To install this package, run the following command:
 
 
-`pip install animal-counter`
+    python setup.py sdist bdist_wheel
+    pip install dist/animalcounter-0.1.0-py3-none-any.whl
 
 Usage
 -----
