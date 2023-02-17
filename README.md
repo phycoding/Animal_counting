@@ -1,4 +1,4 @@
-his package is designed to count animals in images and videos using object detection.
+This package is designed to count animals in images and videos using object detection.
 
 Installation
 ------------
@@ -15,40 +15,40 @@ Usage
 Here is an example of how to use the package:
 
 
-`from animal_counter import AnimalCounter`
+    from animal_counter import AnimalCounter
 
-Create an instance of the AnimalCounter
-`animal_counter = AnimalCounter()`
+    #Create an instance of the AnimalCounter
+    animal_counter = AnimalCounter()
 
-Load an image
-`image_path = "/path/to/image.jpg"`
-`image = animal_counter.load_image(image_path)`
+    #Load an image
+    image_path = "/path/to/image.jpg"
+    image = animal_counter.load_image(image_path)
 
-Get the output image with the animal count
-`output_image = animal_counter.get_output_image(image)`
+    #Get the output image with the animal count
+    output_image = animal_counter.get_output_image(image)
 
-Display the output image
-`cv2.imshow("Output Image", output_image)`
-`cv2.waitKey(0)`
+    #Display the output image
+    cv2.imshow("Output Image", output_image)
+    cv2.waitKey(0)
 
-Load a video
-`video_path = "/path/to/video.mp4"`
-`cap = animal_counter.load_video(video_path)`
+    #Load a video
+    video_path = "/path/to/video.mp4"
+    cap = animal_counter.load_video(video_path)
 
-Loop through the frames of the video and count the animals
-`while cap.isOpened():
-    ret, frame = cap.read()
-    if ret == True:
-        output_image = animal_counter.get_output_image(frame)
-        cv2.imshow('Output Image', output_image)
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+    #Loop through the frames of the video and count the animals
+    while cap.isOpened():
+        ret, frame = cap.read()
+        if ret == True:
+            output_image = animal_counter.get_output_image(frame)
+            cv2.imshow('Output Image', output_image)
+            if cv2.waitKey(25) & 0xFF == ord('q'):
+                break
+        else:
             break
-    else:
-        break
 
-Release the video capture object and close all windows
-cap.release()
-cv2.destroyAllWindows()`
+    #Release the video capture object and close all windows
+    cap.release()
+    cv2.destroyAllWindows()
 
 Dependencies
 ------------
