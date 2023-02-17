@@ -14,28 +14,28 @@ Usage
 Here is an example of how to use the package:
 
 
-`from animal_counter import AnimalCounter
+`from animal_counter import AnimalCounter`
 
 Create an instance of the AnimalCounter
-animal_counter = AnimalCounter()
+`animal_counter = AnimalCounter()`
 
 Load an image
-image_path = "/path/to/image.jpg"
-image = animal_counter.load_image(image_path)
+`image_path = "/path/to/image.jpg"`
+`image = animal_counter.load_image(image_path)`
 
 Get the output image with the animal count
-output_image = animal_counter.get_output_image(image)
+`output_image = animal_counter.get_output_image(image)`
 
 Display the output image
-cv2.imshow("Output Image", output_image)
-cv2.waitKey(0)
+`cv2.imshow("Output Image", output_image)`
+`cv2.waitKey(0)`
 
 Load a video
-video_path = "/path/to/video.mp4"
-cap = animal_counter.load_video(video_path)
+`video_path = "/path/to/video.mp4"`
+`cap = animal_counter.load_video(video_path)`
 
 Loop through the frames of the video and count the animals
-while cap.isOpened():
+`while cap.isOpened():
     ret, frame = cap.read()
     if ret == True:
         output_image = animal_counter.get_output_image(frame)
