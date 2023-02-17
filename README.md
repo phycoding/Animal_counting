@@ -64,4 +64,4 @@ This package requires the following dependencies:
 License
 -------
 
-This package is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/chat/LICENSE) file for details.
+This package is licensed under the MIT License.
